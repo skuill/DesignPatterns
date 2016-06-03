@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93BD582C-5BC3-4A1B-A444-FE94A5D34932}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Creational\AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\AbstractProductA.cs" />
+    <Compile Include="Creational\AbstractFactory\AbstractProductB.cs" />
+    <Compile Include="Creational\AbstractFactory\Client.cs" />
+    <Compile Include="Creational\AbstractFactory\ConcreteFactory1.cs" />
+    <Compile Include="Creational\AbstractFactory\ConcreteFactory2.cs" />
+    <Compile Include="Creational\AbstractFactory\ProductA1.cs" />
+    <Compile Include="Creational\AbstractFactory\ProductA2.cs" />
+    <Compile Include="Creational\AbstractFactory\ProductB1.cs" />
+    <Compile Include="Creational\AbstractFactory\ProductB2.cs" />
+    <Compile Include="Creational\Builder\Builder.cs" />
+    <Compile Include="Creational\Builder\ConcreteBuilder1.cs" />
+    <Compile Include="Creational\Builder\ConcreteBuilder2.cs" />
+    <Compile Include="Creational\Builder\Director.cs" />
+    <Compile Include="Creational\Builder\Product.cs" />
+    <Compile Include="Creational\Factory Method\ConcreteCreator1.cs" />
+    <Compile Include="Creational\Factory Method\ConcreteCreator2.cs" />
+    <Compile Include="Creational\Factory Method\ConcreteProduct1.cs" />
+    <Compile Include="Creational\Factory Method\ConcreteProduct2.cs" />
+    <Compile Include="Creational\Factory Method\Creator.cs" />
+    <Compile Include="Creational\Factory Method\Product.cs" />
+    <Compile Include="Creational\Prototype\ConcretePrototype1.cs" />
+    <Compile Include="Creational\Prototype\ConcretePrototype2.cs" />
+    <Compile Include="Creational\Prototype\Prototype.cs" />
+    <Compile Include="Labyrinth\BombedMazeFactory.cs" />
+    <Compile Include="Labyrinth\BombedMazeGame.cs" />
+    <Compile Include="Labyrinth\BombedWall.cs" />
+    <Compile Include="Labyrinth\CountingMazeBuilder.cs" />
+    <Compile Include="Labyrinth\Direction.cs" />
+    <Compile Include="Labyrinth\Door.cs" />
+    <Compile Include="Labyrinth\DoorNeedingSpell.cs" />
+    <Compile Include="Labyrinth\EnchantedMazeFactory.cs" />
+    <Compile Include="Labyrinth\EnchantedMazeGame.cs" />
+    <Compile Include="Labyrinth\EnchantedRoom.cs" />
+    <Compile Include="Labyrinth\MapSite.cs" />
+    <Compile Include="Labyrinth\Maze.cs" />
+    <Compile Include="Labyrinth\MazeBuilder.cs" />
+    <Compile Include="Labyrinth\MazeFactory.cs" />
+    <Compile Include="Labyrinth\MazeGame.cs" />
+    <Compile Include="Labyrinth\Room.cs" />
+    <Compile Include="Labyrinth\RoomWithABomb.cs" />
+    <Compile Include="Labyrinth\Spell.cs" />
+    <Compile Include="Labyrinth\StandardMazeBuilder.cs" />
+    <Compile Include="Labyrinth\Wall.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

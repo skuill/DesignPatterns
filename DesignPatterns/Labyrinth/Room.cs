@@ -13,12 +13,30 @@ namespace DesignPatterns.Labyrinth
             {
                 return _roomNumber;
             }
+            // It's bad, but okay for example
+            set
+            {
+                _roomNumber = value;
+            }
         }
 
-        public Room(int roomNo)
+        public Room(int roomNo = int.MinValue)
         {
             _roomNumber = roomNo;
             _sides = new Dictionary<Direction, MapSite>();
+        }
+
+        protected Room(Room room)
+        {
+            _roomNumber = room._roomNumber;
+            _sides = new Dictionary<Direction, MapSite>();
+            if (room._sides != null)
+            {
+                foreach (var side in room._sides)
+                {
+                    _sides.Add(side.Key, (MapSite)side.Value.Clone());
+                }
+            }
         }
 
         public MapSite GetSide(Direction direction)
@@ -45,9 +63,11 @@ namespace DesignPatterns.Labyrinth
             }
         }
 
-        public override void Enter()
-        {
+        public override void Enter() { }
 
+        public override object Clone()
+        {
+            return new Room(this);
         }
     }
 }

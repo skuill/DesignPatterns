@@ -10,8 +10,9 @@ namespace DesignPatterns.Labyrinth
     {
         private bool _hasSpell; 
 
-        public DoorNeedingSpell(Room r1, Room r2, bool hasSpell = false): base(r1, r2)
+        public DoorNeedingSpell(Room r1, Room r2, bool hasSpell = false)
         {
+            Initialize(r1, r2);
             _hasSpell = hasSpell;
         }
     }

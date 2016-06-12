@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DesignPatterns.Labyrinth
 {
     /// <summary>
@@ -29,9 +24,7 @@ namespace DesignPatterns.Labyrinth
             _doorsCount++;
         }
 
-        public override void BuildMaze()
-        {
-        }
+        public override void BuildMaze() { }
 
         public override Maze GetMaze()
         {

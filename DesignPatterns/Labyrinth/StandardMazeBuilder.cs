@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DesignPatterns.Labyrinth
 {
     /// <summary>
@@ -36,7 +31,8 @@ namespace DesignPatterns.Labyrinth
         {
             Room room1 = _currentMaze.RoomNo(roomNo1);
             Room room2 = _currentMaze.RoomNo(roomNo2);
-            Door door = new Door(room1, room2);
+            Door door = new Door();
+            door.Initialize(room1, room2);
 
             room1.SetSide(CommonWall(room1, room2), door);
             room2.SetSide(CommonWall(room2, room1), door);

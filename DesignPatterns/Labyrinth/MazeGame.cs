@@ -20,7 +20,9 @@ namespace DesignPatterns.Labyrinth
 
         public virtual Door MakeDoor(Room r1, Room r2)
         {
-            return new Door(r1, r2);
+            Door door = new Door();
+            door.Initialize(r1, r2);
+            return door;
         }
 
         /// <summary>
@@ -32,7 +34,8 @@ namespace DesignPatterns.Labyrinth
             Maze aMaze = new Maze();
             Room r1 = new Room(1);
             Room r2 = new Room(2);
-            Door theDoor = new Door(r1, r2);
+            Door theDoor = new Door();
+            theDoor.Initialize(r1, r2);
 
             aMaze.AddRoom(r1);
             aMaze.AddRoom(r2);
@@ -103,6 +106,30 @@ namespace DesignPatterns.Labyrinth
             r2.SetSide(Direction.North, MakeWall());
             r2.SetSide(Direction.East, MakeWall());
             r2.SetSide(Direction.South, MakeWall());
+            r2.SetSide(Direction.West, theDoor);
+
+            return aMaze;
+        }
+
+        public Maze CreateMazePrototype(MazePrototypeFactory protoFactory)
+        {
+            Maze aMaze = protoFactory.MakeMaze();
+
+            Room r1 = protoFactory.MakeRoom(1);
+            Room r2 = protoFactory.MakeRoom(2);
+            Door theDoor = protoFactory.MakeDoor(r1, r2);
+
+            aMaze.AddRoom(r1);
+            aMaze.AddRoom(r2);
+
+            r1.SetSide(Direction.North, protoFactory.MakeWall());
+            r1.SetSide(Direction.East, theDoor);
+            r1.SetSide(Direction.South, protoFactory.MakeWall());
+            r1.SetSide(Direction.West, protoFactory.MakeWall());
+
+            r2.SetSide(Direction.North, protoFactory.MakeWall());
+            r2.SetSide(Direction.East, protoFactory.MakeWall());
+            r2.SetSide(Direction.South, protoFactory.MakeWall());
             r2.SetSide(Direction.West, theDoor);
 
             return aMaze;

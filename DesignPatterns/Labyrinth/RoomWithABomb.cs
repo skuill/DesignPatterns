@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DesignPatterns.Labyrinth
 {
     public class RoomWithABomb : Room
     {
-        public RoomWithABomb(int roomNo) : base(roomNo) { }
+        public RoomWithABomb(int roomNo = int.MinValue) : base(roomNo) { }
+
+        protected RoomWithABomb(RoomWithABomb room) : base(room) { }
+
+        public override object Clone()
+        {
+            return new RoomWithABomb(this);
+        }
     }
 }

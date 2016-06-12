@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DesignPatterns.Creational.Prototype
 {
     public class ConcretePrototype1 : Prototype
     {
-        public ConcretePrototype1(string prototypeInfo) : base(prototypeInfo)
-        {
-        }
+        public ConcretePrototype1(string prototypeInfo) : base(prototypeInfo) { }
 
-        public override Prototype Clone()
+        protected ConcretePrototype1(ConcretePrototype1 proto1) : base(proto1) { }
+
+        // Simple way: shallow Copy 
+        //public override object Clone()
+        //{
+        //    return this.MemberwiseClone();
+        //}
+
+        // True way: deep Copy with protected constructor
+        public override object Clone()
         {
-            return (Prototype)this.MemberwiseClone();
+            return new ConcretePrototype1(this);
         }
     }
 }

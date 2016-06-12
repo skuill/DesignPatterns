@@ -55,10 +55,13 @@
     <Compile Include="Creational\BuilderTest.cs" />
     <Compile Include="Creational\FactoryMethodTest.cs" />
     <Compile Include="Creational\PrototypeTest.cs" />
+    <Compile Include="Creational\SingletonTest.cs" />
     <Compile Include="Labyrinth\AbstractFactoryMazeGame.cs" />
     <Compile Include="Labyrinth\BuilderMazeGame.cs" />
     <Compile Include="Labyrinth\FactoryMazeGame.cs" />
+    <Compile Include="Labyrinth\PrototypeMazeGame.cs" />
     <Compile Include="Labyrinth\SimpleMazeGame.cs" />
+    <Compile Include="Labyrinth\SingletonMazeGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

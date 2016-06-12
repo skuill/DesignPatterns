@@ -68,6 +68,7 @@
     <Compile Include="Creational\Prototype\ConcretePrototype1.cs" />
     <Compile Include="Creational\Prototype\ConcretePrototype2.cs" />
     <Compile Include="Creational\Prototype\Prototype.cs" />
+    <Compile Include="Creational\Singleton\Singleton.cs" />
     <Compile Include="Labyrinth\BombedMazeFactory.cs" />
     <Compile Include="Labyrinth\BombedMazeGame.cs" />
     <Compile Include="Labyrinth\BombedWall.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Labyrinth\MazeBuilder.cs" />
     <Compile Include="Labyrinth\MazeFactory.cs" />
     <Compile Include="Labyrinth\MazeGame.cs" />
+    <Compile Include="Labyrinth\MazePrototypeFactory.cs" />
     <Compile Include="Labyrinth\Room.cs" />
     <Compile Include="Labyrinth\RoomWithABomb.cs" />
     <Compile Include="Labyrinth\Spell.cs" />

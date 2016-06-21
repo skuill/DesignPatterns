@@ -63,6 +63,8 @@
     <Compile Include="Labyrinth\SimpleMazeGame.cs" />
     <Compile Include="Labyrinth\SingletonMazeGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\AdapterTest.cs" />
+    <Compile Include="Structural\BridgeTest.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

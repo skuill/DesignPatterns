@@ -91,6 +91,14 @@
     <Compile Include="Labyrinth\StandardMazeBuilder.cs" />
     <Compile Include="Labyrinth\Wall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Adapter\Adaptee.cs" />
+    <Compile Include="Structural\Adapter\Adapter.cs" />
+    <Compile Include="Structural\Adapter\Target.cs" />
+    <Compile Include="Structural\Bridge\Abstraction.cs" />
+    <Compile Include="Structural\Bridge\ConcreteImplementorA.cs" />
+    <Compile Include="Structural\Bridge\ConcreteImplementorB.cs" />
+    <Compile Include="Structural\Bridge\Implementor.cs" />
+    <Compile Include="Structural\Bridge\RefinedAbstraction.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
